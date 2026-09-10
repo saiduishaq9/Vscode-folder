@@ -1,357 +1,429 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Al-Imamul Bukhary International College</title>
-    <meta
-      name="description"
-      content="Admissions portal for Al-Imamul Bukhary International College. Apply online, check results, and explore the requirements for the 2026/2027 session."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="#home" class="brand" aria-label="Al-Imamul Bukhary International College home">
-          <span class="brand-mark">IBIC</span>
-          <span class="brand-text">
-            <strong>Al-Imamul Bukhary</strong>
-            <small>International College</small>
-          </span>
-        </a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Al-Imamul Bukhary International College - Online Admission Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Poppins:wght@400;500;600;700&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://mediumslateblue-lark-898072.hostingersite.com/css/site.css">
+</head>
+<body>
 
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#requirements">Requirements</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#results">Check Result</a>
-          <a href="#login">Login Portal</a>
-          <a href="#contact">Contact Us</a>
-          <a href="#apply" class="nav-cta">Apply Online</a>
+    <header class="site-header">
+        <div class="brand-bar">
+    <a href="https://mediumslateblue-lark-898072.hostingersite.com" class="brand">
+        <span class="brand-text">
+            <span class="brand-arabic">كلية الإمام البخاري العالمية</span>
+            <span class="brand-english">Al-Imamul Bukhary International College</span>
+        </span>
+        <img src="https://mediumslateblue-lark-898072.hostingersite.com/images/imam-logo.jpeg" alt="Al-Imamul Bukhary International College Seal" class="brand-logo">
+    </a>
+</div>
+
+        <nav class="site-nav">
+            <div class="nav-inner">
+                <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primaryNav">
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                    <span class="nav-toggle-bar"></span>
+                </button>
+                <div id="primaryNav" class="primary-nav-menu">
+                    <ul class="nav-links">
+                        <li><a id="nav-home" href="https://mediumslateblue-lark-898072.hostingersite.com#home" class="nav-link" onclick="handleNavClick(event, 'home')">Home</a></li>
+                        <li><a id="nav-about" href="https://mediumslateblue-lark-898072.hostingersite.com#about" class="nav-link" onclick="handleNavClick(event, 'about')">About Us</a></li>
+                        <li><a id="nav-requirements" href="https://mediumslateblue-lark-898072.hostingersite.com#requirements" class="nav-link" onclick="handleNavClick(event, 'requirements')">Requirements</a></li>
+                        <li><a id="nav-gallery" href="https://mediumslateblue-lark-898072.hostingersite.com#gallery" class="nav-link" onclick="handleNavClick(event, 'gallery')">Gallery</a></li>
+                        <li><a href="https://mediumslateblue-lark-898072.hostingersite.com/check-result" class="nav-link ">Check Result</a></li>
+                        <li><a href="https://mediumslateblue-lark-898072.hostingersite.com/student/login" class="nav-link ">Student Login</a></li>
+                        <li><a href="https://mediumslateblue-lark-898072.hostingersite.com/parent/login" class="nav-link ">Parent Login</a></li>
+                        <li><a href="https://mediumslateblue-lark-898072.hostingersite.com/staff/login" class="nav-link ">Staff Login</a></li>
+                        <li><a id="nav-contact" href="https://mediumslateblue-lark-898072.hostingersite.com#contact" class="nav-link" onclick="handleNavClick(event, 'contact')">Contact Us</a></li>
+                    </ul>
+                    <div class="nav-actions">
+                        <a id="nav-apply" href="https://mediumslateblue-lark-898072.hostingersite.com#apply" class="nav-link nav-cta" onclick="handleNavClick(event, 'apply')">Apply Online</a>
+                        <div class="lang-toggle" role="group" aria-label="Language">
+                            <button type="button" class="lang-btn active" aria-pressed="true">EN</button>
+                            <button type="button" class="lang-btn" aria-pressed="false" onclick="showArabicComingSoon()">عربي</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </nav>
-      </div>
     </header>
 
-    <main>
-      <section class="hero" id="home">
-        <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow">Admissions Open — 2026/2027 Session</p>
-            <h1>Excellence in Islamic &amp; Western Education</h1>
-            <p class="lead">
-              A boarding college for boys aged 10–18, nurturing Qur'anic scholarship, academic rigor,
-              and sound Islamic character.
-            </p>
-            <div class="hero-actions">
-              <a href="#apply" class="button primary">Start Application</a>
-              <a href="#requirements" class="button secondary">View Requirements</a>
+    <div id="langNotice" class="lang-notice" style="display:none;">
+        <div class="container" style="display:flex; align-items:center; justify-content:space-between; gap:10px;">
+            <span>Arabic translation is coming soon.</span>
+            <button type="button" onclick="document.getElementById('langNotice').style.display='none';" aria-label="Dismiss" style="background:none;border:none;font-size:1.1rem;cursor:pointer;color:inherit;">&times;</button>
+        </div>
+    </div>
+
+    
+    
+    <div id="home" class="tab-content active">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <span class="eyebrow">Admissions Open — 2026/2027 Session</span>
+                    <h1>Excellence in <span class="accent-text">Islamic &amp; Western</span> Education</h1>
+                    <p class="lead">A boarding college for boys aged 10–18, nurturing Qur'anic scholarship, academic rigor, and sound Islamic character.</p>
+                    <div class="hero-actions">
+                        <button type="button" class="btn btn-primary" onclick="switchTab('apply')">Start Application</button>
+                        <a href="https://mediumslateblue-lark-898072.hostingersite.com#requirements" class="btn btn-outline" onclick="handleNavClick(event, 'requirements')">View Requirements</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <dt>10–18</dt>
+                            <dd>Age range</dd>
+                        </div>
+                        <div class="stat">
+                            <dt>5 Classes</dt>
+                            <dd>JSS 1 to SS 2</dd>
+                        </div>
+                        <div class="stat">
+                            <dt>₦15,000</dt>
+                            <dd>Application fee</dd>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <ul class="hero-metrics" aria-label="College statistics">
-              <li>
-                <strong>10–18</strong>
-                <span>Age range</span>
-              </li>
-              <li>
-                <strong>5 Classes</strong>
-                <span>JSS 1 to SS 2</span>
-              </li>
-              <li>
-                <strong>₦15,000</strong>
-                <span>Application fee</span>
-              </li>
-            </ul>
-          </div>
-
-          <div class="hero-panel" aria-label="Admissions summary">
-            <div class="school-badge">Boys' Boarding</div>
-            <h2>Full-time residential</h2>
-            <div class="feature-grid">
-              <div>
-                <span>Islamic + Western</span>
-                <strong>Unified curriculum</strong>
-              </div>
-              <div>
-                <span>Character</span>
-                <strong>2 Referees</strong>
-              </div>
-              <div>
-                <span>Location</span>
-                <strong>Kano, Nigeria</strong>
-              </div>
-              <div>
-                <span>Campus</span>
-                <strong>Wak Town, Bebeji LGA</strong>
-              </div>
+        <div class="fact-strip">
+            <div class="fact-strip-inner">
+                <div class="fact"><strong>Boys' Boarding</strong><span>Full-time residential</span></div>
+                <div class="fact"><strong>Islamic + Western</strong><span>Unified curriculum</span></div>
+                <div class="fact"><strong>2 Referees</strong><span>Character assessed</span></div>
+                <div class="fact"><strong>Kano, Nigeria</strong><span>Wak Town, Bebeji LGA</span></div>
             </div>
-          </div>
         </div>
-      </section>
 
-      <section class="highlights">
-        <div class="container highlights-grid">
-          <article class="highlight-card">
-            <span class="tag green">Why Al-Imamul Bukhary</span>
-            <h3>A balanced foundation for boys</h3>
-            <p>Every applicant is guided through one unified curriculum built on faith and academic excellence.</p>
-          </article>
-
-          <article class="highlight-card">
-            <span class="tag gold">Curriculum</span>
-            <h3>Islamic &amp; Western Curriculum</h3>
-            <p>Qur'anic and Islamic studies taught alongside a full conventional academic syllabus.</p>
-          </article>
-
-          <article class="highlight-card">
-            <span class="tag blue">Boarding</span>
-            <h3>Boys' Boarding College</h3>
-            <p>A structured, disciplined boarding environment for male students aged 10 to 18.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section about" id="about">
-        <div class="container two-column">
-          <div>
-            <p class="section-kicker">About Us</p>
-            <h2>Building bright futures with discipline and faith.</h2>
-            <p>
-              At Al-Imamul Bukhary International College, we believe in nurturing every young man to become
-              disciplined, confident, and academically prepared for life beyond school.
-            </p>
-            <p>
-              Our environment combines strong Islamic values, quality teaching, and a robust residential
-              system that supports growth in character, learning, and leadership.
-            </p>
-          </div>
-
-          <div class="info-card">
-            <h3>Admission Standards</h3>
-            <ul>
-              <li>JSS 1 through SS 2</li>
-              <li>Apply for JSS 1–3 or SS 1–2</li>
-              <li>Entrance score determines initial class placement</li>
-              <li>Scores below 40 place you one class down</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="section accent" id="requirements">
         <div class="container">
-          <div class="section-head">
-            <p class="section-kicker">Requirements</p>
-            <h2>Prepare your documents before you apply.</h2>
-          </div>
+            <div class="section">
+                <div class="section-header">
+                    <span class="eyebrow">Why Al-Imamul Bukhary</span>
+                    <h2>A balanced foundation for boys</h2>
+                    <p>Every applicant is guided through one unified curriculum built on faith and academic excellence.</p>
+                </div>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3>Islamic &amp; Western Curriculum</h3>
+                        <p>Qur'anic and Islamic studies taught alongside a full conventional academic syllabus.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Boys' Boarding College</h3>
+                        <p>A structured, disciplined boarding environment for male students aged 10 to 18.</p>
+                    </div>
+                    <div class="card">
+                        <h3>JSS 1 through SS 2</h3>
+                        <p>Apply for JSS 1–3 or SS 1–2. A strong entrance exam score keeps you in the class applied for; scores below 40 place you one class down.</p>
+                    </div>
+                </div>
+            </div>
 
-          <div class="requirements-grid">
-            <div class="requirement-card">
-              <span class="number">01</span>
-              <h3>Academic Documents</h3>
-              <p>Recent school reports, photocopies, and passport photograph of the applicant.</p>
+            <div class="section">
+                <div class="section-header">
+                    <span class="eyebrow">How It Works</span>
+                    <h2>From application to admission</h2>
+                </div>
+                <div class="process-list">
+                    <div class="process-item">
+                        <span class="n">01</span>
+                        <div>
+                            <h3>Apply &amp; upload receipt</h3>
+                            <p>Create your portal account, pay the ₦15,000 application fee by bank transfer, and upload your receipt.</p>
+                        </div>
+                    </div>
+                    <div class="process-item">
+                        <span class="n">02</span>
+                        <div>
+                            <h3>Prepare your documents</h3>
+                            <p>Fill and print your Reference Form and Health Report from your applicant portal for hand-signing.</p>
+                        </div>
+                    </div>
+                    <div class="process-item">
+                        <span class="n">03</span>
+                        <div>
+                            <h3>Sit the entrance exam</h3>
+                            <p>Arrive with your document checklist for the Arabic/Islamic and English/Western papers.</p>
+                        </div>
+                    </div>
+                    <div class="process-item">
+                        <span class="n">04</span>
+                        <div>
+                            <h3>Get your placement</h3>
+                            <p>Your result is reviewed and your class placement is confirmed and shared with you.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="requirement-card">
-              <span class="number">02</span>
-              <h3>Reference Form</h3>
-              <p>Fill and print your Reference Form from your applicant portal for hand-signing.</p>
+
+            <div class="cta-band">
+                <div>
+                    <h2>Ready to begin?</h2>
+                    <p>Applications for the 2026/2027 academic session are open now.</p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="switchTab('apply')">Start Your Application</button>
             </div>
-            <div class="requirement-card">
-              <span class="number">03</span>
-              <h3>Health Report</h3>
-              <p>Submit a completed health report signed by a qualified medical practitioner.</p>
-            </div>
-            <div class="requirement-card">
-              <span class="number">04</span>
-              <h3>School Fee</h3>
-              <p>Pay the non-refundable application fee of ₦15,000 through the online portal.</p>
-            </div>
-          </div>
         </div>
-      </section>
+    </div>
 
-      <section class="section process" id="process">
+    
+    <div id="about" class="tab-content">
         <div class="container">
-          <div class="section-head">
-            <p class="section-kicker">How It Works</p>
-            <h2>From application to admission.</h2>
-          </div>
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">About Us</span>
+                    <h2>Al-Imamul Bukhary International College</h2>
+                    <p>An institution dedicated to integrating Islamic principles with modern academic standards — forming young men of knowledge, character, and leadership.</p>
+                </div>
 
-          <div class="steps-grid">
-            <article class="step-item">
-              <span class="step-number">01</span>
-              <h3>Apply &amp; pay online</h3>
-              <p>Submit the online form and complete the ₦15,000 application fee securely.</p>
-            </article>
-            <article class="step-item">
-              <span class="step-number">02</span>
-              <h3>Prepare your documents</h3>
-              <p>Fill and print your Reference Form and Health Report from your applicant portal.</p>
-            </article>
-            <article class="step-item">
-              <span class="step-number">03</span>
-              <h3>Sit the entrance exam</h3>
-              <p>Arrive with your checklist for the Arabic/Islamic and English/Western papers.</p>
-            </article>
-            <article class="step-item">
-              <span class="step-number">04</span>
-              <h3>Get your placement</h3>
-              <p>Your result is reviewed and your class placement is confirmed and shared with you.</p>
-            </article>
-          </div>
+                <div class="grid grid-3" style="margin-bottom:3rem;">
+                    <div class="card">
+                        <h3>Islamic Devotion &amp; Integrity</h3>
+                        <p>Grounded in authentic Islamic teaching and practice, guiding every aspect of college life.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Academic Rigor &amp; Leadership</h3>
+                        <p>A demanding curriculum that prepares students to lead with knowledge and confidence.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Emotional Maturity &amp; Conduct</h3>
+                        <p>Character and discipline developed alongside academic and religious growth.</p>
+                    </div>
+                </div>
+
+                
+                <div class="section-header">
+                    <span class="eyebrow">Leadership</span>
+                    <h2>Our Chairman</h2>
+                </div>
+                                    <div class="leader-card">
+                        <img src="https://mediumslateblue-lark-898072.hostingersite.com/images/director-sani-rijiyar-lemo.jpg" alt="Prof. Muhammad Sani Umar Rijiyar Lemo" class="leader-photo">
+                        <div class="leader-info">
+                            <h3>Prof. Muhammad Sani Umar Rijiyar Lemo, OON</h3>
+                            <div class="leader-role">Chairman, Al-Imamul Bukhary International College</div>
+                            <p class="leader-bio">Professor of Hadith and Qur'anic Interpretation at Bayero University Kano, and Chief Imam of Dorayi Jum'at Mosque. He also directs the Al-Imamul Bukhary Centre for Research and Translation, and was honoured with Nigeria's Officer of the Order of the Niger (OON) in 2022 for his academic and religious contributions.</p>
+                        </div>
+                    </div>
+                
+                            </div>
         </div>
-      </section>
+    </div>
 
-      <section class="section gallery-section" id="gallery">
+    
+    <div id="requirements" class="tab-content">
         <div class="container">
-          <div class="section-head">
-            <p class="section-kicker">Gallery</p>
-            <h2>Life on campus.</h2>
-          </div>
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">Requirements</span>
+                    <h2>Admission Guidelines &amp; Checklist</h2>
+                </div>
 
-          <div class="gallery-grid">
-            <div class="gallery-card card-one"><span>Qur'anic Class</span></div>
-            <div class="gallery-card card-two"><span>Lecture Hall</span></div>
-            <div class="gallery-card card-three"><span>Sports Day</span></div>
-            <div class="gallery-card card-four"><span>Boarding Life</span></div>
-            <div class="gallery-card card-five"><span>Library</span></div>
-            <div class="gallery-card card-six"><span>Campus Grounds</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section portal-section" id="results">
-        <div class="container portal-grid">
-          <div class="portal-card results-card">
-            <p class="section-kicker">Check Result</p>
-            <h3>Preview your admission outcome.</h3>
-
-            <form class="portal-form" id="resultForm">
-              <label>
-                Applicant ID
-                <input type="text" name="applicantId" placeholder="e.g. BHR-2026-124" required />
-              </label>
-              <label>
-                Session
-                <select name="session">
-                  <option>2026/2027</option>
-                  <option>2025/2026</option>
-                  <option>2024/2025</option>
-                </select>
-              </label>
-              <button type="submit" class="button primary small">Check Result</button>
-            </form>
-            <p class="form-status" id="resultStatus" aria-live="polite"></p>
-          </div>
-
-          <div class="portal-card login-card" id="login">
-            <p class="section-kicker">Login Portal</p>
-            <h3>Applicant login.</h3>
-
-            <form class="portal-form" id="loginForm">
-              <label>
-                Email Address
-                <input type="email" name="email" placeholder="name@example.com" required />
-              </label>
-              <label>
-                Password
-                <input type="password" name="password" placeholder="Enter password" required />
-              </label>
-              <button type="submit" class="button secondary small">Login</button>
-            </form>
-            <p class="form-status" id="loginStatus" aria-live="polite"></p>
-          </div>
-        </div>
-      </section>
-
-      <section class="section apply-section" id="apply">
-        <div class="container apply-wrap">
-          <div class="apply-copy">
-            <p class="section-kicker">Apply Online</p>
-            <h2>Ready to begin?</h2>
-            <p>
-              Applications for the 2026/2027 academic session are open now. Complete your online form and
-              submit your details to begin your admission journey.
-            </p>
-          </div>
-
-          <form class="application-form" id="applicationForm">
-            <div class="form-row">
-              <label>
-                Full Name
-                <input type="text" name="fullName" required />
-              </label>
-              <label>
-                Date of Birth
-                <input type="date" name="dob" required />
-              </label>
+                <div class="grid grid-2">
+                    <div class="surface">
+                        <h3 style="margin-bottom:1rem;">Guidelines &amp; Regulations</h3>
+                        <ol class="guideline-list">
+                            <li>The College follows strict Islamic principles and values in discipline and student training.</li>
+                            <li>Shortlisted applicants sit entrance exams in two parts: Arabic/Islamic Subjects and English/Western Subjects.</li>
+                            <li>All fees must be paid at least two weeks prior to term commencement.</li>
+                            <li>Students may not leave campus grounds except on approved medical grounds via the Principal.</li>
+                        </ol>
+                    </div>
+                    <div class="surface">
+                        <h3 style="margin-bottom:1rem;">Document Checklist</h3>
+                        <ul class="checklist">
+                            <li>Duly completed Application Form</li>
+                            <li>Medical Doctor's Health Report</li>
+                            <li>Reports from two (2) Referees — at least one a recognized Islamic scholar</li>
+                            <li>Copy of Applicant's Birth Certificate</li>
+                            <li>Four (4) recent passport-sized photographs</li>
+                            <li>Application Processing Fee (₦15,000.00) — paid by bank transfer/deposit</li>
+                            <li>Primary School Completion Certificate (if available)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="form-row">
-              <label>
-                Class Applying For
-                <select name="classLevel" required>
-                  <option value="">Select class</option>
-                  <option>JSS 1</option>
-                  <option>JSS 2</option>
-                  <option>JSS 3</option>
-                  <option>SS 1</option>
-                  <option>SS 2</option>
-                </select>
-              </label>
-              <label>
-                Phone Number
-                <input type="tel" name="phone" required />
-              </label>
+    
+    <div id="gallery" class="tab-content">
+        <div class="container">
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">Campus Life</span>
+                    <h2>Gallery</h2>
+                    <p>A look around the college.</p>
+                </div>
+
+                                    <p style="text-align:center; color:var(--muted);">Photos coming soon.</p>
+                            </div>
+        </div>
+    </div>
+
+    
+    <div id="apply" class="tab-content">
+        <div class="container">
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">Step 1 of 3</span>
+                    <h2>Create Your Admission Portal Account</h2>
+                    <p>Start with your name, a phone number, and a 6-digit PIN. You'll pay the ₦15,000 fee next, then fill in the rest of the application from your portal.</p>
+                </div>
+
+                
+                                
+                <form id="applicationStartForm" method="POST" action="https://mediumslateblue-lark-898072.hostingersite.com/apply" style="max-width: 560px; margin: 0 auto;">
+                    <input type="hidden" name="_token" value="9oL7CmQPY0NdbuidognecFDdIaHvMgA33EzUlzAu" autocomplete="off">
+                    <div class="form-step">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>First Name*</label>
+                                <input type="text" name="first_name" value="" required>
+                                                            </div>
+                            <div class="form-group">
+                                <label>Middle Name</label>
+                                <input type="text" name="middle_name" value="">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Last Name*</label>
+                                <input type="text" name="last_name" value="" required>
+                                                            </div>
+                            <div class="form-group full-width">
+                                <label>Phone Number*</label>
+                                <input type="tel" name="phone" value="" required placeholder="e.g. 08012345678">
+                                                            </div>
+                            <div class="form-group">
+                                <label>Create a 6-Digit PIN*</label>
+                                <div class="password-field">
+                                    <input type="password" id="pin" name="pin" required pattern="\d{6}" inputmode="numeric" maxlength="6" placeholder="e.g. 204819">
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('pin', this)" aria-label="Show">
+    <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+        <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.8 21.8 0 0 1 5.06-6.06M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+        <line x1="1" y1="1" x2="23" y2="23"/>
+    </svg>
+</button>
+                                </div>
+                                                            </div>
+                            <div class="form-group">
+                                <label>Confirm PIN*</label>
+                                <div class="password-field">
+                                    <input type="password" id="pin_confirmation" name="pin_confirmation" required pattern="\d{6}" inputmode="numeric" maxlength="6">
+                                    <button type="button" class="password-toggle" onclick="togglePasswordVisibility('pin_confirmation', this)" aria-label="Show">
+    <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+        <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.8 21.8 0 0 1 5.06-6.06M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+        <line x1="1" y1="1" x2="23" y2="23"/>
+    </svg>
+</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" style="padding: 14px;">Create Account &amp; Proceed</button>
+                </form>
+                            </div>
+        </div>
+    </div>
+
+    
+    <div id="login" class="tab-content">
+        <div class="container">
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">Applicant Portal</span>
+                    <h2>Student Login</h2>
+                    <p>Check your application status, exam results, and Qur'an memorization progress — and download your exam slip and reference/health report forms.</p>
+                </div>
+                <div class="surface surface-narrow">
+                                        <form method="POST" action="https://mediumslateblue-lark-898072.hostingersite.com/portal/login">
+                        <input type="hidden" name="_token" value="9oL7CmQPY0NdbuidognecFDdIaHvMgA33EzUlzAu" autocomplete="off">                        <input type="hidden" name="login_as" value="student">
+                        <div class="form-group" style="margin-bottom: 1.1rem;">
+                            <label>Phone Number</label>
+                            <input type="tel" name="portal_phone" value="" required placeholder="e.g. 08012345678">
+                        </div>
+                        <div class="form-group" style="margin-bottom: 1.3rem;">
+                            <label>6-Digit PIN</label>
+                            <div class="password-field">
+                                <input type="password" id="login_pin" name="login_pin" required pattern="\d{6}" inputmode="numeric" maxlength="6" placeholder="Enter your PIN">
+                                <button type="button" class="password-toggle" onclick="togglePasswordVisibility('login_pin', this)" aria-label="Show">
+    <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8Z"/>
+        <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+        <path d="M17.94 17.94A10.94 10.94 0 0 1 12 20c-7 0-11-8-11-8a21.8 21.8 0 0 1 5.06-6.06M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a21.8 21.8 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+        <line x1="1" y1="1" x2="23" y2="23"/>
+    </svg>
+</button>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    </form>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <div class="form-row">
-              <label>
-                Parent/Guardian Name
-                <input type="text" name="guardian" required />
-              </label>
-              <label>
-                Email Address
-                <input type="email" name="email" required />
-              </label>
+    
+    <div id="contact" class="tab-content">
+        <div class="container">
+            <div class="section" style="padding-top:3rem;">
+                <div class="section-header">
+                    <span class="eyebrow">Get in Touch</span>
+                    <h2>Contact Us</h2>
+                </div>
+                <div class="grid grid-2">
+                    <div class="surface">
+                        <h3 style="margin-bottom: 0.4rem;">College Address</h3>
+                        <p style="margin-bottom: 1.2rem;">Wak Town, Dakatsalle, Off Zaria Road,<br>Bebeji LGA, Kano - Nigeria.</p>
+
+                        <h3 style="margin-bottom: 0.4rem;">Research Center Address</h3>
+                        <p style="margin-bottom: 1.2rem;">Al-Imamul Bukhary Center for Research &amp; Translation,<br>Rigiyar Zaki, Ungogo LGA, Kano - Nigeria.</p>
+
+                        <h3 style="margin-bottom: 0.4rem;">Direct Contact</h3>
+                        <p><strong>Phone:</strong> 08026153131, 07071666776</p>
+                        <p><strong>Email:</strong> bukharyinternationalcollege@gmail.com</p>
+                    </div>
+                    <div class="surface">
+                        <h3 style="margin-bottom:1rem;">Send Us a Message</h3>
+                        <form onsubmit="alert('Thank you! This contact form is not yet wired to email delivery.'); return false;">
+                            <div class="form-group" style="margin-bottom: 12px;">
+                                <label>Your Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 12px;">
+                                <label>Your Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 14px;">
+                                <label>Message</label>
+                                <textarea rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 
-            <label>
-              Address
-              <textarea name="address" rows="4" required></textarea>
-            </label>
 
-            <button type="submit" class="button primary">Submit Application</button>
-            <p class="form-status" id="applicationStatus" aria-live="polite"></p>
-          </form>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer" id="contact">
-      <div class="container footer-inner">
-        <div>
-          <h3>Al-Imamul Bukhary International College</h3>
-          <p>Wak Town, Bebeji LGA, Kano, Nigeria</p>
-        </div>
-        <div>
-          <p>Contact: +234 (0)800 000 0000</p>
-          <p>Email: admissions@alimbukhary.edu.ng</p>
-        </div>
-        <div>
-          <p>© <span id="year"></span> Al-Imamul Bukhary International College.</p>
-          <p>All Rights Reserved.</p>
-        </div>
-      </div>
+    <footer>
+        <p>&copy; 2026 Al-Imamul Bukhary International College. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
-  </body>
+    <script src="https://mediumslateblue-lark-898072.hostingersite.com/js/site.js"></script>
+    </body>
 </html>
