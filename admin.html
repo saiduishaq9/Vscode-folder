@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IBIC Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="admin-body">
+    <div class="admin-shell">
+      <aside class="admin-sidebar">
+        <div class="admin-brand">
+          <span class="brand-mark">IBIC</span>
+          <div>
+            <strong>Admissions</strong>
+            <small>Admin Portal</small>
+          </div>
+        </div>
+
+        <nav class="admin-nav">
+          <a href="/" class="nav-link active">Applicant Management</a>
+          <a href="#" class="nav-link">Admission Records</a>
+          <a href="#" class="nav-link">Application Status</a>
+          <a href="#" class="nav-link">Decision Center</a>
+        </nav>
+      </aside>
+
+      <main class="admin-main">
+        <header class="admin-topbar">
+          <div>
+            <p class="section-kicker">Overview</p>
+            <h1>Applicant Management</h1>
+          </div>
+          <a href="/" class="button primary small">Back to Website</a>
+        </header>
+
+        <section class="admin-stats">
+          <article class="stat-box">
+            <span>Total Applications</span>
+            <strong id="statTotal">0</strong>
+          </article>
+          <article class="stat-box">
+            <span>Pending Applications</span>
+            <strong id="statPending">0</strong>
+          </article>
+          <article class="stat-box">
+            <span>Accepted Applications</span>
+            <strong id="statAccepted">0</strong>
+          </article>
+        </section>
+
+        <section class="admin-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-kicker">Applications</p>
+              <h2>Admission Records</h2>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Applicant ID</th>
+                  <th>Name</th>
+                  <th>Class</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminTableBody">
+                <tr>
+                  <td colspan="6">Loading applications...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+[
+  {
+    "applicantId": "BHR-2026-0001",
+    "fullName": "Abubakar Sani",
+    "dob": "2015-05-10",
+    "classLevel": "SS 1",
+    "phone": "+2348001234567",
+    "guardian": "Malam Sani",
+    "email": "abubakar@example.com",
+    "address": "Wak Town, Bebeji LGA, Kano",
+    "status": "Submitted",
+    "decision": "Pending review"
+  },
+  {
+    "applicantId": "BHR-2026-0002",
+    "fullName": "Abubakar Sani",
+    "dob": "2015-05-10",
+    "classLevel": "SS 1",
+    "phone": "+2348001234567",
+    "guardian": "Malam Sani",
+    "email": "ddd@gmail.com",
+    "address": "Wak Town, Bebeji LGA, Kano",
+    "status": "Submitted",
+    "decision": "Pending review"
+  }
+]
